@@ -6,10 +6,14 @@ public class Main {
     public static void main(String[] args)
     {
         // Create new Application
-        com.napier.devops.App a = new com.napier.devops.App();
+        App a = new App();
 
         // Connect to database
         a.connect();
+        // Get Employee
+        Employee emp = a.getEmployee(255530);
+        // Display results
+        a.displayEmployee(emp);
 
         // Disconnect from database
         a.disconnect();
